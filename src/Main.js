@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import styles from './Styles.css';
 import food1 from '../src/greek salad.jpg';
@@ -8,6 +9,12 @@ import menu from '../src/menu.png';
 import interior  from '../src/restaurant.jpg';
 import MenuModal from './MenuModal.js';
 import './MenuModal.css';
+import BookingPage from './BookingPage.js';
+import ConfirmedBooking from './ConfirmedBooking';
+import BookingForm  from './BookingForm.js';
+const submitAPI = function(formData) {
+  return true;
+};
 const SpecialCard = ({ title, price, description, image }) => (
   <div className="special-card">
     <img src={image} alt={title} className="card-image" />
@@ -39,6 +46,14 @@ const TestimonialCard = ({ rating, text, author }) => (
 
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const submitForm = (formData) => {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate('/confirmed');
+    }
+  };
+
   const specials = [
     {
       title: "Greek salad",
@@ -75,7 +90,6 @@ const Main = () => {
           </div>
         </div>
       </section>
-
       <section className="section testimonials">
         <div className="container">
           <h2 className="section-title text-center">Testimonials</h2>
@@ -110,6 +124,7 @@ const Main = () => {
         onClose={() => setIsMenuOpen(false)} 
         menuImage={menu}
       />
+
     </main>
   );
 };
