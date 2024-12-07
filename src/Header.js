@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './Styles.css';
 import logopic from '../src/Logo.svg'
 import headerpic from '../src/restauranfood.jpg'
 
 const Header = () => {
+  const navigate = useNavigate();
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,7 +26,7 @@ const Header = () => {
             <a onClick={() => window.scrollTo(0, 0)} className="nav-link">Home</a>
             <a onClick={() => scrollToSection('about')} className="nav-link">About</a>
             <a onClick={() => scrollToSection('menu')} className="nav-link">Menu</a>
-            <a href="/reservations" className="nav-link">Reservations</a>
+            <a onClick={() => navigate('/my-reservations')} className="nav-link">Reservations</a>
             <a href="/order" className="nav-link">Order Online</a>
             <a href="/login" className="nav-link">Login</a>
           </div>
@@ -40,7 +42,7 @@ const Header = () => {
               We are a family owned Mediterranean restaurant, focused on traditional 
               recipes served with a modern twist.
             </p>
-            <button className="button">Reserve a Table</button>
+            <button className="button" onClick={() => navigate('/reservations')}>Reserve a Table</button>
           </div>
           <div className="hero-image">
             <img src={headerpic} alt="Featured dish" />

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Styles.css';
 import food1 from '../src/greek salad.jpg';
 import food2 from '../src/images.jpeg';
 import food3  from '../src/lemon dessert.jpg';
+import menu from '../src/menu.png';
 import interior  from '../src/restaurant.jpg';
+import MenuModal from './MenuModal.js';
+import './MenuModal.css';
 const SpecialCard = ({ title, price, description, image }) => (
   <div className="special-card">
     <img src={image} alt={title} className="card-image" />
@@ -35,6 +38,7 @@ const TestimonialCard = ({ rating, text, author }) => (
 );
 
 const Main = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const specials = [
     {
       title: "Greek salad",
@@ -62,7 +66,7 @@ const Main = () => {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">This weeks specials!</h2>
-            <button className="button">Online Menu</button>
+            <button className="button" onClick={() => setIsMenuOpen(true)}>Online Menu</button>
           </div>
           <div className="cards-grid">
             {specials.map((special) => (
@@ -101,6 +105,11 @@ const Main = () => {
           </div>
         </div>
       </section>
+      <MenuModal 
+        isOpen={isMenuOpen} 
+        onClose={() => setIsMenuOpen(false)} 
+        menuImage={menu}
+      />
     </main>
   );
 };

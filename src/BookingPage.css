@@ -1,0 +1,125 @@
+.booking-page {
+    padding: 4rem 0;
+    background-color: #F3F4F6;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .booking-page h1 {
+    text-align: center;
+    color: #495E57;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 500;
+  }
+  
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .form-field input:focus,
+  .form-field select:focus {
+    outline: none;
+    border-color: #F59E0B;
+    ring: 2px #F59E0B;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #F59E0B;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button:hover {
+    background-color: #D97706;
+  }
+  .form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .submit-button, .cancel-button {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button {
+    background-color: #F59E0B;
+    color: white;
+    border: none;
+  }
+  
+  .submit-button:hover {
+    background-color: #D97706;
+  }
+  
+  .cancel-button {
+    background-color: #white;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+  }
+  
+  .cancel-button:hover {
+    background-color: #F3F4F6;
+  }
+  
+  .success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .success-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .success-content h2 {
+    color: #059669;
+    margin-bottom: 1rem;
+  }
