@@ -9,6 +9,6 @@ making reservations:
 <img width="1324" alt="截屏2024-12-08 00 26 39" src="https://github.com/user-attachments/assets/b00d71ea-5d9e-4a89-8d7c-fd224b739132">
 SEE reservation results:
 <img width="1230" alt="截屏2024-12-08 00 26 55" src="https://github.com/user-attachments/assets/5ecb7fb8-6389-4e67-b404-0b8f7d1eeec9">
-add or delete results:
+edit or delete results:
 <img width="1271" alt="截屏2024-12-08 00 30 07" src="https://github.com/user-attachments/assets/bbc787c2-0064-4636-a38e-34a6442970e9">
 <img width="1360" alt="截屏2024-12-08 00 30 18" src="https://github.com/user-attachments/assets/6194630d-0fed-428e-9994-c3497da5fbc0">
