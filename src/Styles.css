@@ -1,0 +1,482 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Markazi Text', sans-serif;
+}
+
+/* 导航栏 */
+.nav-bar {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem; /* 增加logo和导航链接之间的间距 */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #374151;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #F4CE14;
+}
+
+/* Hero部分 */
+.hero {
+  background-color: #495E57;
+  color: white;
+  height:300px;
+  padding: 2.5rem 2rem;
+  position: relative
+}
+
+.hero-content {
+  max-width: 62rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 改为顶部对齐 */
+  gap: 2rem;
+  height: 100%;
+  padding-top: 1rem;
+}
+
+.hero-text {
+  max-width: 20rem;
+}
+
+.hero-title {
+  color: #F4CE14;
+  font-size: 3rem; /* 缩小标题字体 */
+  font-weight: 500;
+  margin-bottom: 0rem;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.75rem; /* 缩小副标题字体 */
+  line-height: 1;
+  margin-bottom: 1.0rem; /* 减小副标题下方间距 */
+}
+
+.hero-description {
+  font-size: 1rem; /* 缩小描述文字 */
+  margin-bottom: 1rem; /* 减小描述下方间距 */
+  color: #F3F4F6;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #D97706;
+}
+
+.hero-image {
+  width: 24rem;
+  height: 20rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* 特色菜品部分 */
+.section {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  margin-top: 30px;
+  font-size: 2.25rem;
+  color: #1F2937;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 菜品卡片 */
+/* 通用容器样式 */
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Specials区域 */
+.section {
+  padding: 3rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  color: #1F2937;
+}
+
+/* 卡片网格 */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* 特色菜品卡片 */
+.special-card {
+  background-color: #F9FAFB;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 20rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+.card-price {
+  color: #F97316;
+  font-size: 1.25rem;
+}
+
+.card-description {
+  color: #4B5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.order-button {
+  display: flex;
+  align-items: center;
+  color: #495E57;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.order-button:hover {
+  color: #000000;
+}
+
+.delivery-icon {
+  margin-left: 0.5rem;
+}
+
+/* Testimonials区域 */
+.testimonials {
+  background-color: #F3F4F6;
+  padding: 3rem 0;
+}
+.testimonials .section-title {
+  text-align: center;
+  width: 100%; /* 确保标题占据整行 */
+  margin-bottom: 2rem;
+}
+.testimonial-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 18rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  color: #F59E0B;
+  font-size: 1.5rem;
+}
+
+.testimonial-text {
+  color: #4B5563;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #1F2937;
+}
+
+/* About区域 */
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 28rem;
+}
+
+.about-title {
+  color: #F59E0B;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.about-subtitle {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #1F2937;
+  line-height: 1;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: #4B5563;
+  line-height: 1.7;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 28rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.footer {
+  background-color: #495E57;
+  color: white;
+  padding: 4rem 0;
+}
+
+.footer .container {
+  max-width: 50rem; /* 与其他部分保持一致 */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 70%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #F3F4F6;
+}
+
+.footer-description {
+  color: #D1D5DB;
+  line-height: 1.6;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-list li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-link {
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #F59E0B;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer {
+    padding: 3rem 0;
+  }
+}
