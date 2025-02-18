@@ -1,74 +1,13 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# biglemon
->>>>>>> 168ee2560814e7df767ae4127f909a01ad880954
+Front-end video demo:check demo1.mov.zip
+screenshots here:
+main
+<img width="1362" alt="截屏2024-12-08 00 25 54" src="https://github.com/user-attachments/assets/5173de95-190c-4a09-9da1-73de3e6e4f95">
+<img width="1363" alt="截屏2024-12-08 00 26 04" src="https://github.com/user-attachments/assets/04c09a6c-bd37-4ca3-99c0-e1f736852b7b">
+making reservations:
+<img width="1378" alt="截屏2024-12-08 00 26 18" src="https://github.com/user-attachments/assets/5aa20c45-8e0e-444e-b14a-9c759344e8ca">
+<img width="1324" alt="截屏2024-12-08 00 26 39" src="https://github.com/user-attachments/assets/b00d71ea-5d9e-4a89-8d7c-fd224b739132">
+SEE reservation results:
+<img width="1230" alt="截屏2024-12-08 00 26 55" src="https://github.com/user-attachments/assets/5ecb7fb8-6389-4e67-b404-0b8f7d1eeec9">
+edit or delete results:
+<img width="1271" alt="截屏2024-12-08 00 30 07" src="https://github.com/user-attachments/assets/bbc787c2-0064-4636-a38e-34a6442970e9">
+<img width="1360" alt="截屏2024-12-08 00 30 18" src="https://github.com/user-attachments/assets/6194630d-0fed-428e-9994-c3497da5fbc0">
