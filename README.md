@@ -1,5 +1,4 @@
-🌟🌟🌟For anyone wants to save time I made a video demo:🌟🌟🌟
-check demo1.mov.zip in the file!!!
+Front-end video demo:check demo1.mov.zip
 screenshots here:
 main
 <img width="1362" alt="截屏2024-12-08 00 25 54" src="https://github.com/user-attachments/assets/5173de95-190c-4a09-9da1-73de3e6e4f95">
