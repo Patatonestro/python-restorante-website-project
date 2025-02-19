@@ -29,10 +29,9 @@ urlpatterns = [
     path('cart/menu-items/add', views.CartView.as_view(), name='add_to_cart'),
     path('cart/menu-items/clear', views.CartView.as_view(), name='clear_cart'),
     #订单
-    path('api/orders', views.OrderListView.as_view(), name='order_list'),
-    path('api/orders/create', views.OrderListView.as_view(), name='create_order'),
-    path('api/orders/<int:order_id>', views.OrderListView.as_view(), name='order_detail'),
-    path('api/orders/<int:order_id>/update', views.OrderListView.as_view(), name='order_update'),
-    path('api/orders/<int:order_id>/delete', views.OrderListView.as_view(), name='order_delete')
-
+    path('orders', views.OrderListView.as_view(), name='order_list'),
+    path('orders/create', views.OrderListView.as_view(), name='create_order'),
+    path('orders/<int:order_id>', views.OrderListView.as_view(), name='order_detail'),
+    path('orders/<int:order_id>/update', views.OrderListView.as_view(), name='order_update'),
+    path('orders/<int:order_id>/delete', views.OrderListView.as_view(), name='order_delete')
 ]

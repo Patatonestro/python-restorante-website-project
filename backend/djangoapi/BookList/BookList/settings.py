@@ -41,9 +41,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
     'BookListAPI',
+    'restaurant',
     'debug_toolbar',
-
-
 ]
 
 MIDDLEWARE = [
@@ -127,7 +126,9 @@ STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-
+STATICFILES_DIRS = [
+    'restaurant/static',
+]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [

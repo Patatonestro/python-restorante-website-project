@@ -15,7 +15,7 @@ from rest_framework.throttling import UserRateThrottle
 class MenuItemViewSet(viewsets.ModelViewSet):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
-    throttle_classes = [UserRateThrottle]  # 默认限流
+    throttle_classes = [UserRateThrottle]
 
     def get_throttles(self):
         if self.action in ['list', 'retrieve']:  # 只对 GET 请求限流
