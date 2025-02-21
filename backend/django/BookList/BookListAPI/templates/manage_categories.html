@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Categories</title>
+</head>
+<body>
+    <h1>Manage Categories</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Category Title" required>
+        <input type="text" name="slug" placeholder="Category Slug" required>
+        <button type="submit">Add Category</button>
+    </form>
+    <h2>Existing Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.title }} ({{ category.slug }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
