@@ -1,37 +1,26 @@
-from django.urls import path,include
-from . import views
+from .views import MenuItemListView,MenuItemDetailView,ManagerGroupView,DeliveryCrewGroupView,CartListView,OrderDetailsView,OrderOperationView
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import MenuItemViewSet
 
 router = DefaultRouter()
-router.register(r'menu-items', MenuItemViewSet)
+router.register(r'groups/manager/users', ManagerGroupView, basename='manager-group')
+router.register(r'groups/delivery-crew/users', DeliveryCrewGroupView, basename='delivery-crew-group')
+
 urlpatterns = [
+    path('', include(router.urls)),
     #用户类
     path('users',include('djoser.urls')),
-    path('users/users/me/',views.CurrentUserView.as_view(), name='current_user'),
     path('token/login/', include('djoser.urls.jwt')),
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls')),
+    path('auth', include('djoser.urls.authtoken')),
     #菜单类
-    path('menu-items', views.MenuItemListView.as_view(), name='menu-item-list'),
-    path('menu-items', views.MenuItemListView.as_view(), name='menu-item-create'),
-    path('menu-items/<int:menu_item_id>', views.MenuItemDetailView.as_view(), name='menu-item-detail'),
-    path('menu-items/<int:menu_item_id>', views.MenuItemDetailView.as_view(), name='menu-item-update'),
-    path('menu-items/<int:menu_item_id>', views.MenuItemDetailView.as_view(), name='menu-item-delete'),
-    #管理
-    path('groups/manager/users',views.ManagerGroupView.as_view(),name='return_all_managers'),
-    path('groups/manager/users/<int:user_id>', views.ManagerGroupView.as_view(), name='remove_from_manager_group'),
-    #管理-配送员信息
-    path('groups/delivery-crew/users', views.DeliveryCrewGroupView.as_view(), name='assign_delivery_crew_to_order'),
-    path('groups/delivery-crew/users/<int:user_id>', views.DeliveryCrewGroupView.as_view(), name='remove_from_delivery_crew_group'),
+    path('menu-items', MenuItemListView.as_view()),
+    path('menu-items/<int:pk>', MenuItemDetailView.as_view()),
     #购物车
-    path('cart/menu-items',views.CartView.as_view(), name='cart_view'),
-    path('cart/menu-items/add', views.CartView.as_view(), name='add_to_cart'),
-    path('cart/menu-items/clear', views.CartView.as_view(), name='clear_cart'),
+    path('cart/menu-items',CartListView.as_view(), name='cart_view'),
     #订单
-    path('orders', views.OrderListView.as_view(), name='order_list'),
-    path('orders/create', views.OrderListView.as_view(), name='create_order'),
-    path('orders/<int:order_id>', views.OrderListView.as_view(), name='order_detail'),
-    path('orders/<int:order_id>/update', views.OrderListView.as_view(), name='order_update'),
-    path('orders/<int:order_id>/delete', views.OrderListView.as_view(), name='order_delete')
+    path('orders', OrderDetailsView.as_view(), name='order_customer'),
+    path('orders/<int:pk>',  OrderDetailsView.as_view()),
+    #订单管理
+    path('orders', OrderOperationView.as_view(), name='order_admin'),
+    path('orders/<int:pk>',  OrderOperationView.as_view()),
 ]
