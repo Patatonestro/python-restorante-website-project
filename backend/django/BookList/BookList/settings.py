@@ -155,5 +155,11 @@ REST_FRAMEWORK = {
         'user': '50/minute',
     }
 }
+DJOSER = {
+    'USER_ID_FIELD': 'id',
+    'LOGIN_FIELD': 'username',
+    'TOKEN_MODEL':'rest_framework.authtoken.models.Token',
+}
+
 INTERNAL_IPS = ['127.0.0.1']
 

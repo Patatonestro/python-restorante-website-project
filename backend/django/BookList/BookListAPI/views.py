@@ -135,15 +135,14 @@ class OrderOperationView(generics.ListCreateAPIView):
         order=Order.objects.create(user=request.user)
         total_price=0
         for item in cart_items:
-            for item in cart_items:
-                order_item = OrderItem.objects.create(
-                order=order,
-                menuitem=item.menuitem,
-                quantity=item.quantity,
-                unit_price=item.menuitem.price,
-                price=item.quantity * item.menuitem.price
-            )
-            total_price += order_item.price
+            order_item = OrderItem.objects.create(
+            order=order,
+            menuitem=item.menuitem,
+            quantity=item.quantity,
+            unit_price=item.menuitem.price,
+            price=item.quantity * item.menuitem.unit_price
+        )
+        total_price += order_item.price
         
         order.total = total_price
         order.save()
